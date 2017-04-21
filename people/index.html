@@ -25,31 +25,31 @@ css: /assets/people.css
     {{ page.og_title }}
   </h1>
 
-  <div id="submenu" class="ui sticky">
+</div>
 
-    <nav data-context="desktop" class="ui pagination borderless menu">
-      {% for type in site.data.people.settings %}
-      {% for item in type[1] %}
-      <a class="item" href="#{{ item.id }}">{{ item.name }}</a>
-      {% endfor %}
-      {% endfor %}
-    </nav>
+<div id="submenu" class="ui">
 
-    <nav data-context="mobile" class="ui one item menu">
-      <div class="ui dropdown item">
-        <span data-content="current">跳至...</span>
-        <i class="dropdown icon"></i>
-        <div class="menu">
-          {% for type in site.data.people.settings %}
-          {% for item in type[1] %}
-          <a class="item" href="#{{ item.id }}">{{ item.name }}</a>
-          {% endfor %}
-          {% endfor %}
-        </div>
+  <nav data-context="desktop" class="ui pagination borderless menu">
+    {% for type in site.data.people.settings %}
+    {% for item in type[1] %}
+    <a class="item" href="#{{ item.id }}">{{ item.name }}</a>
+    {% endfor %}
+    {% endfor %}
+  </nav>
+
+  <nav data-context="mobile" class="ui one item menu">
+    <div class="ui dropdown item">
+      <span data-content="current">跳至...</span>
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        {% for type in site.data.people.settings %}
+        {% for item in type[1] %}
+        <a class="item" href="#{{ item.id }}">{{ item.name }}</a>
+        {% endfor %}
+        {% endfor %}
       </div>
-    </nav>
-
-  </div>
+    </div>
+  </nav>
 
 </div>
 

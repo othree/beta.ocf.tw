@@ -28,47 +28,51 @@ js: /assets/projects.js
     {{ page.og_title }}
   </h1>
 
-  <div id="submenu" class="ui sticky">
+</div>
 
-    <nav data-context="desktop" class="ui pagination borderless menu">
+<div id="submenu" class="ui">
 
-      {% for filter in site.data.projects.settings.filter %}
-      <div class="ui dropdown item">
-        <span data-content="{{ filter[0] }}">所有{{ filter[1].name }}</span>
-        <i class="dropdown icon"></i>
-        <div class="menu">
-          <a class="item" data-{{ filter[0] }}="all">所有{{ filter[1].name }}</a>
+  <nav data-context="desktop" class="ui pagination borderless menu">
 
-          {% for item in filter[1].items %}
-          <a class="item" data-{{ filter[0] }}="{{ item[0] }}">{{ item[1] }}</a>
-          {% endfor %}
+    {% for filter in site.data.projects.settings.filter %}
+    <div class="ui dropdown item">
+      <span data-content="{{ filter[0] }}">所有{{ filter[1].name }}</span>
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        <a class="item" data-{{ filter[0] }}="all">所有{{ filter[1].name }}</a>
 
-        </div>
+        {% for item in filter[1].items %}
+        <a class="item" data-{{ filter[0] }}="{{ item[0] }}">{{ item[1] }}</a>
+        {% endfor %}
+
       </div>
-      {% endfor %}
+    </div>
+    {% endfor %}
 
-    </nav>
+  </nav>
 
-    <nav data-context="mobile" class="ui one item menu">
+  <nav data-context="mobile" class="ui one item menu">
 
-      {% for filter in site.data.projects.settings.filter %}
-      <div class="ui dropdown item">
-        <span data-content="{{ filter[0] }}">所有{{ filter[1].name }}</span>
-        <i class="dropdown icon"></i>
-        <div class="menu">
-          <a class="item" data-{{ filter[0] }}="all">所有{{ filter[1].name }}</a>
+    {% for filter in site.data.projects.settings.filter %}
+    <div class="ui dropdown item">
+      <span data-content="{{ filter[0] }}">所有{{ filter[1].name }}</span>
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        <a class="item" data-{{ filter[0] }}="all">所有{{ filter[1].name }}</a>
 
-          {% for item in filter[1].items %}
-          <a class="item" data-{{ filter[0] }}="{{ item[0] }}">{{ item[1] }}</a>
-          {% endfor %}
+        {% for item in filter[1].items %}
+        <a class="item" data-{{ filter[0] }}="{{ item[0] }}">{{ item[1] }}</a>
+        {% endfor %}
 
-        </div>
       </div>
-      {% endfor %}
+    </div>
+    {% endfor %}
 
-    </nav>
+  </nav>
 
-  </div>
+</div>
+
+<div class="ui center aligned stripe container">
 
   <p class="top margin">這裡有 <span id="filter_count"></span> 個專案正在加速進行中！</p>
 

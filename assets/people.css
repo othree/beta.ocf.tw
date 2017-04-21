@@ -30,3 +30,19 @@
 .ui[class*="bottom pointing"].label, .ui[class*="pointing below"].label {
   margin-bottom: 1.5em;
 }
+
+.pushable > .pusher {
+  overflow: visible;
+}
+
+#submenu {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  text-align: center;
+}
+
+#submenu .menu {
+  margin-left: auto;
+  margin-right: auto;
+}
